@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Iniciar sesión</h1>Iniciar sesión
+<form method = "post">
+    {% csrf_token %}
+{{ form }}
+<input type="submit" value="Enviar">
+</form>
+
+{% if messages %}
+    <ul>
+        {% for message in messages %}  
+            <li>{{ message }}</li>     
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endblock %}
