@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from .views import indice, acerca, bienvenido,contacto,exito
 
 urlpatterns = [
@@ -6,5 +6,6 @@ urlpatterns = [
     path('acerca/', acerca, name="about"),
     path('bienvenido/', bienvenido, name="welcome"),
     path('contacto/', contacto, name="contact"),
-    path('exito/', exito, name="success" )
+    path('exito/', exito, name="success" ),
+    path('accounts/', include("django.contrib.auth.urls")),
 ]

@@ -3,7 +3,7 @@
 
 
 {% block content %}
-<h1>Bienvenido {{ user_name }}</h1>
+<h1>Bienvenido {{ user.get_username }}</h1>
 <div class="row">
     {% for flan in flanes %}
     <div class="col-md-4">
