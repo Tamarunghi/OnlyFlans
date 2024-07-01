@@ -32,5 +32,10 @@
         </div>
         {% endif %}
     </div>
+
+    {% load socialaccount %}
+    <h1>Google Login</h1>
+    <a href="{% provider_login_url 'google' %}?next={{ request.path }}">Login with google</a>
+
 </div>
 {% endblock %}
