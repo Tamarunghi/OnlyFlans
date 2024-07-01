@@ -3,39 +3,47 @@
 
 
 {% block content %}
+
 <header class="mt-4 mb-4 d-flex flex-column justify-content-center align-items-center">
-<h1 class="custome-title text-center fw-bolder">ONLY <br> FLANS</h1>
-<div class="line"></div>
+  <h1 class="custome-title text-center fw-bolder">ONLY <br> FLANS</h1>
+  <div class="line"></div>
 </header>
-<main id="index">
-    <section>
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="customCarousel carousel-item active">
-                <img  src=""  class="d-block w-100" alt="...">
-              </div>
-              <div class="customCarousel carousel-item">
-                <img src="" class="d-block w-100" alt="...">
-              </div>
-              <div class="customCarousel carousel-item">
-                <img src="" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-    </section>
-    <section></section>
-</main>
+
+<div class="container mb-4">
+  <h2 class="text-center custom-heading">
+    <a href="{% url 'login' %}" class="custom-link">Inicia sesión</a> o 
+    <a href="{% url 'contact' %}" class="custom-link">regístrate aquí</a> 
+    para ver nuestros flanes exclusivos
+  </h2>
+</div>
+
+<section>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      {% for flan in flanes %}
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="true" aria-label="Slide {{ forloop.counter }}"></button>
+      {% endfor %}
+    </div>
+    <div class="carousel-inner">
+      {% for flan in flanes %}
+      <div class="carousel-item {% if forloop.first %}active{% endif %}">
+        <img src="{{ flan.image_url }}" class="d-block w-100" alt="{{ flan.name }}">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>{{ flan.name }}</h5>
+          <p>{{ flan.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
 {% endblock %}
+

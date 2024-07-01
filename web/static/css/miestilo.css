@@ -1,3 +1,9 @@
+#content {
+  padding-top: 20px; /* Ajusta según el espacio que desees entre el contenido y el header */
+  min-height: calc(100vh - 80px); /* Ajusta el valor '80px' según el tamaño real del footer */
+
+}
+
 body {
   background-color: black;
   color: white;
@@ -24,10 +30,22 @@ body {
   width: 100vw;
 }
 
+/*color navbar icon*/
+/* Oculta el ícono por defecto */
 .navbar-toggler-icon {
-  filter: invert(100%);
+  display: none;
 }
 
+/* Añade la imagen del menú usando ::after */
+.navbar-toggler::after {
+  content: "";
+  display: inline-block;
+  width: 40px;  /* Ajusta el ancho según tus necesidades */
+  height: 40px; /* Ajusta la altura según tus necesidades */
+  background: url("../img/neonNavbar.png") no-repeat center center;
+  background-size: contain;
+}
+/*fin color navbar icon*/
 .sizeHover:hover {
   transform: scale(1.2);
 }
@@ -47,7 +65,50 @@ body {
   box-shadow: 0 0 10px 5px #1efbf8;
 }
 
+/*carrusel*/
+#carouselExampleIndicators {
+  max-width: 800px; /* Ajustar el ancho máximo del carrusel */
+  margin: auto; /* Centrar el carrusel horizontalmente */
+}
+
 .customCarousel {
   box-shadow: 0 0 10px 5px #1efbf8;
 }
+/*Fin carrusel*/
 
+.navbar-nav .nav-link {
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffa800, 0 0 30px #ffa800, 0 0 10px #ffa800,
+    0 0 10px #ffa800;
+
+}
+/*h2*/
+.custom-heading {
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffa800, 0 0 30px #ffa800, 0 0 10px #ffa800,
+    0 0 10px #ffa800;
+}
+
+.custom-link {
+  text-decoration: none; /* Elimina el subrayado */
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffa800, 0 0 30px #ffa800, 0 0 10px #ffa800,
+    0 0 10px #ffa800;
+}
+
+.custom-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffa800, 0 0 30px #ffa800, 0 0 10px #ffa800,
+    0 0 10px #ffa800;
+}
+/*Fin h2*/
+
+/*footer*/
+footer {
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  margin-top: auto;
+}
+/*Fin footer*/
