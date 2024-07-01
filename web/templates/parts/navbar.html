@@ -1,9 +1,30 @@
 
-<nav class="container navbar navbar-expand-lg bg-body-tertiary">
+{% load static %}
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <!--MENU-->
+      <div>
+        <button class=" sizeHover navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+          <!--LOGO-->
+    <div>
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <img class="onlyFlansLogo sizeHover" src="{% static 'img/neonLogo1.png' %}" alt="Logo">
+        </a>
+    </div>
+      <!--USER & Cart-->
+    <div>
+        <a class="navbar-brand" href="{% url 'welcome' %}">
+          <img class="imgSize sizeHover" src="{% static 'img/neonUser.png' %}" alt="User Avatar">
+        </a>
+        <a class="navbar-brand" href="#">
+          <img class="imgSize sizeHover" src="{% static 'img/neonCart.png' %}" alt="Shopping Cart">
+        </a>
+    </div>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
