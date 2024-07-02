@@ -1,51 +1,64 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
-    <div class="col-12 col-md-6 offset-md-3 mt-4 mb-4">
-        <h3 class="text-center neon-Class">Registrarse</h3>
-        <form method="post" class="mt-4">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="{{ form.username.id_for_label }}">Usuario</label>
-                {{ form.username }}
+<header class="neon-class d-flex justify-content-center">
+    <h1>Registro</h1>
+</header>
+<main id="register" class="neon-class d-flex justify-content-center">
+    <form method="post">
+        {% csrf_token %}
+        <!--User-->
+        <section class="mb-3">
+            <p class="m-0">Nombre de usuario</p>
+            <div>{{ form.username }}
                 {% for error in form.username.errors %}
-                    <div class="invalid-feedback">
-                        {{ error }}
-                    </div>
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
                 {% endfor %}
             </div>
-            <div class="form-group">
-                <label for="{{ form.email.id_for_label }}">Correo Electrónico</label>
+        </section>
+        <!--E-mail-->
+        <section class="mb-3">
+            <p class="m-0">E-mail</p>
+            <div>
                 {{ form.email }}
                 {% for error in form.email.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <!--Password-->
+        <section class="mb-5">
+            <div class="mb-3">
+                <p class="m-0">Contraseña <span class="small-font-size">(mínimo 8 caracteres, <br>una mayúscula y un símbolo)</span></p>
+                <div>
+                    {{ form.password1 }}
+                    {% for error in form.password1.errors %}
                     <div class="invalid-feedback">
                         {{ error }}
                     </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
-            <div class="form-group">
-                <label for="{{ form.password1.id_for_label }}">Contraseña</label>
-                {{ form.password1 }}
-                {% for error in form.password1.errors %}
+            <div>
+                <p class="m-0">Confirmar contraseña</p>
+                <div>
+                    {{ form.password2 }}
+                    {% for error in form.password2.errors %}
                     <div class="invalid-feedback">
                         {{ error }}
                     </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
-            <div class="form-group">
-                <label for="{{ form.password2.id_for_label }}">Confirmar Contraseña</label>
-                {{ form.password2 }}
-                {% for error in form.password2.errors %}
-                    <div class="invalid-feedback">
-                        {{ error }}
-                    </div>
-                {% endfor %}
-            </div>
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary">Registrarse</button>
-            </div>
-        </form>
-    </div>
-</div>
+        </section>
+        <!--Button-->
+        <section class="text-center">
+            <button type="submit" class="btn custome-btn">Enviar</button>
+        </section>
+    </form>
+</main>
 {% endblock %}

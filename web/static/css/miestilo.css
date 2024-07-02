@@ -16,7 +16,7 @@ body {
 }
 
 /*NEON*/
-.neon-Class {
+.neon-class {
   text-decoration: none; /* Elimina el subrayado */
   color: #ffffff;
   text-shadow: 0 0 10px #ffa800, 0 0 30px #ffa800, 0 0 10px #ffa800,
@@ -36,6 +36,11 @@ body {
     0 0 10px #1efbf8;
   outline: 1.5px solid white;
   box-shadow: 0 0 10px 5px #1efbf8, inset 0 0 7px 2px #1efbf8;
+}
+.custome-btn:hover {
+  text-shadow: 0 0 10px #1efbf8, 0 0 35px #1efbf8, 0 0 15px #1efbf8,
+    0 0 15px #1efbf8;
+  box-shadow: 0 0 5px 7px #1efbf8, inset 0 0 10px 5px #1efbf8;
 }
 
 #content {
@@ -171,4 +176,16 @@ footer {
   background-color: white;
   border-radius: 0 0 90% 0;
   box-shadow: 0 0 10px 5px #1efbf8;
+}
+
+/*REGISTER*/
+.small-font-size{
+  font-size: 0.8rem;
+  color: rgb(220, 220, 220);
+  text-shadow: 0 0 5px #ffa800, 0 0 10px #ffa800, 0 0 5px #ffa800,
+    0 0 5px #ffa800;
+    opacity: 50%;
+}
+.small-font-size:hover{
+    opacity: 100%;
 }

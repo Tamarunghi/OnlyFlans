@@ -4,13 +4,13 @@
 {% block content %}
 <div class="container">
     <div class="col-12 col-md-6 offset-0 offset-md-3 mt-4 mb-4">
-        <h3 class="neon-Class text-center">
+        <h3 class="neon-class text-center">
             Contactanos
         </h3>
         <form method="post" class="md-3 text-center">
             {% csrf_token %}
             {{ form.non_field_errors }}
-            <div class="neon-Class mb-3 text-center">
+            <div class="neon-class mb-3 text-center">
                 <label for="{{ form.customer_name.id_for_label }}" class="form-label">
                     Nombre
                 </label>
@@ -22,7 +22,7 @@
                 </div>
             </div>
             
-            <div class="neon-Class mb-3 text-center">
+            <div class="neon-class mb-3 text-center">
                 <label for="{{ form.customer_email.id_for_label }}" class="form-label">
                     Email
                 </label>
@@ -34,7 +34,7 @@
                 </div>
             </div>
 
-            <div class="neon-Class mb-3 text-center">
+            <div class="neon-class mb-3 text-center">
                 <label for="{{ form.message.id_for_label }}" class="form-label">
                     Mensaje
                 </label>
