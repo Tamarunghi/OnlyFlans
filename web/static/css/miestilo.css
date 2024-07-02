@@ -1,13 +1,9 @@
-#content {
-  padding-top: 20px; /* Ajusta según el espacio que desees entre el contenido y el header */
-  min-height: calc(100vh - 80px); /* Ajusta el valor '80px' según el tamaño real del footer */
-
-}
-
 body {
   background-color: black;
   color: white;
 }
+
+/*FONTS*/
 #roboto {
   font-family: "Roboto Mono", monospace;
   color: #747ec6;
@@ -18,6 +14,46 @@ body {
   font-family: "Playwrite MX", cursive;
   font-weight: bold;
 }
+
+/*NEON*/
+.neon-Class {
+  text-decoration: none; /* Elimina el subrayado */
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffa800, 0 0 30px #ffa800, 0 0 10px #ffa800,
+    0 0 10px #ffa800;
+}
+.neon-line {
+  padding: 10px 7px 7px 7px;
+  border: 2px solid white;
+  border-radius: 30px;
+  box-shadow: 0 0 10px 5px #ffa800, inset 0 0 7px 2px #ffa800;
+}
+
+.custome-btn {
+  text-decoration: none; /* Elimina el subrayado */
+  color: #ffffff;
+  text-shadow: 0 0 10px #1efbf8, 0 0 30px #1efbf8, 0 0 10px #1efbf8,
+    0 0 10px #1efbf8;
+  outline: 1.5px solid white;
+  box-shadow: 0 0 10px 5px #1efbf8, inset 0 0 7px 2px #1efbf8;
+}
+
+#content {
+  padding-top: 20px; /* Ajusta según el espacio que desees entre el contenido y el header */
+  min-height: calc(
+    100vh - 80px
+  ); /* Ajusta el valor '80px' según el tamaño real del footer */
+}
+
+/*NAVBAR*/
+.text-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  text-shadow: 0 0 6px #ffa800, 0 0 12px #ffa800;
+}
+
 .onlyFlansLogo {
   width: 70px;
 }
@@ -40,7 +76,7 @@ body {
 .navbar-toggler::after {
   content: "";
   display: inline-block;
-  width: 40px;  /* Ajusta el ancho según tus necesidades */
+  width: 40px; /* Ajusta el ancho según tus necesidades */
   height: 40px; /* Ajusta la altura según tus necesidades */
   background: url("../img/neonNavbar.png") no-repeat center center;
   background-size: contain;
@@ -49,38 +85,11 @@ body {
 .sizeHover:hover {
   transform: scale(1.2);
 }
-/*INDEX*/
-.custome-title {
-  font-size: 5rem;
-  color: #ffffff;
-  text-shadow: 0 0 10px #ffa800, 0 0 30px #ffa800, 0 0 40px #ffa800,
-    0 0 50px #ffa800, 0 0 60px #ffa800;
-}
-
-.line {
-  width: 260px;
-  height: 5px;
-  background-color: white;
-  border-radius: 0 0 90% 0;
-  box-shadow: 0 0 10px 5px #1efbf8;
-}
-
-/*carrusel*/
-#carouselExampleIndicators {
-  max-width: 800px; /* Ajustar el ancho máximo del carrusel */
-  margin: auto; /* Centrar el carrusel horizontalmente */
-}
-
-.customCarousel {
-  box-shadow: 0 0 10px 5px #1efbf8;
-}
-/*Fin carrusel*/
 
 .navbar-nav .nav-link {
   color: #ffffff;
   text-shadow: 0 0 10px #ffa800, 0 0 30px #ffa800, 0 0 10px #ffa800,
     0 0 10px #ffa800;
-
 }
 /*h2*/
 .custom-heading {
@@ -112,3 +121,54 @@ footer {
   margin-top: auto;
 }
 /*Fin footer*/
+
+/*INDEX*/
+.custome-title {
+  font-size: 5rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffa800, 0 0 30px #ffa800, 0 0 40px #ffa800,
+    0 0 50px #ffa800, 0 0 60px #ffa800;
+}
+
+.line {
+  width: 260px;
+  height: 5px;
+  background-color: white;
+  border-radius: 0 0 90% 0;
+  box-shadow: 0 0 10px 5px #1efbf8;
+}
+
+/*carrusel*/
+#carouselExampleIndicators {
+  max-width: 800px; /* Ajustar el ancho máximo del carrusel */
+  margin: auto; /* Centrar el carrusel horizontalmente */
+}
+
+.customCarousel {
+  box-shadow: 0 0 10px 5px #1efbf8;
+}
+/*Fin carrusel*/
+
+/*Scroll Menu*/
+.scrollable-section {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+.scrollable-section img {
+  width: 100px;
+}
+
+.custom-image {
+  width: 100px;
+  height: auto;
+}
+
+/*ABOUT US*/
+.line2 {
+  width: 200px;
+  height: 5px;
+  background-color: white;
+  border-radius: 0 0 90% 0;
+  box-shadow: 0 0 10px 5px #1efbf8;
+}
