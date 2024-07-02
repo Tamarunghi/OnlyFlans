@@ -1,7 +1,8 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login, authenticate
 from .models import Flan
-from .forms import ContactFormForm
+from .forms import ContactFormForm,RegisterForm
 
 # Create your views here.
 def indice(request):
@@ -29,3 +30,17 @@ def contacto(request):
 
 def exito(request):
     return render(request, 'views/success.html')
+
+def register(request):
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            user.refresh_from_db()# Recarga la instancia del usuario desde la base de datos para actualizar cualquier dato adicional
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=user.username, password=raw_password)
+            login(request, user)
+            return redirect('welcome')
+    else:
+        form = RegisterForm()
+    return render(request, 'registration/register.html', {'form': form})
