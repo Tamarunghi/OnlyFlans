@@ -6,8 +6,7 @@ from .forms import ContactFormForm,RegisterForm
 
 # Create your views here.
 def indice(request):
-    flanes_publicos = Flan.objects.filter(is_private=False)
-    return render(request, "views/index.html", {'flanes': flanes_publicos})
+    return render(request, "views/index.html")
 
 def acerca(request):
     return render(request, "views/about.html")
@@ -17,6 +16,11 @@ def bienvenido(request):
     flanes_privados = Flan.objects.filter(is_private=True)
     user_name = request.GET.get('name', 'cliente')
     return render(request, "views/welcome.html", {'user_name': user_name, 'flanes': flanes_privados})
+
+def productos(request):
+    flanes_publicos = Flan.objects.filter(is_private=False)
+    return render(request, "views/products.html", {'flanes': flanes_publicos})
+
 
 def contacto(request):
     if request.method == 'POST':
