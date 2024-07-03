@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+{% block asideMenu %}
+<div class="col-lg-2">
+    {% include 'parts/asideMenu.html' %}
+</div>
+{% endblock %}
+
 {% block content %}
 <header class="neon-class mt-4 mb-4 d-flex flex-column justify-content-center align-items-center">
     <h1>Registro</h1>

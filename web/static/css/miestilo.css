@@ -128,8 +128,8 @@ footer {
 /*Fin footer*/
 
 /*INDEX*/
-.custome-title {
-  font-size: 5rem;
+.custom-title {
+  font-size: 4rem;
   color: #ffffff;
   text-shadow: 0 0 10px #ffa800, 0 0 30px #ffa800, 0 0 40px #ffa800,
     0 0 50px #ffa800, 0 0 60px #ffa800;
@@ -144,13 +144,8 @@ footer {
 }
 
 /*carrusel*/
-#carouselExampleIndicators {
-  max-width: 800px; /* Ajustar el ancho máximo del carrusel */
-  margin: auto; /* Centrar el carrusel horizontalmente */
-}
-
-.customCarousel {
-  box-shadow: 0 0 10px 5px #1efbf8;
+.custom-carousel img{
+  width: 5px;
 }
 /*Fin carrusel*/
 
@@ -167,6 +162,16 @@ footer {
 .custom-image {
   width: 100px;
   height: auto;
+}
+
+@media (min-width: 992px) {
+  .custom-image img {
+    width: 100px;
+    height: auto;
+  }
+}
+.noContainer {
+  width: 100vw;
 }
 
 /*ABOUT US*/

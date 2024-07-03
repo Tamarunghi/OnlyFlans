@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 
-
+{% block asideMenu %}
+<div class="col-lg-2">
+    {% include 'parts/asideMenu.html' %}
+</div>
+{% endblock %}
 
 {% block content %}
+{% if user.get_username %}
 <h1 class="neon-class mb-5">Bienvenido/a {{ user.get_username }}</h1>
+{% endif %}
 <div class="row">
     {% for flan in flanes %}
     <div class="col-md-4">
