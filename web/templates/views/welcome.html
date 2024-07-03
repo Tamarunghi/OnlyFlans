@@ -10,9 +10,9 @@
 <h1 class="neon-class mb-5">Bienvenido/a {{ user.get_username }}</h1>
 <div class="row">
     {% for flan in flanes %}
-    <div class="col-md-4">
-        <div class="card">
-            <img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}">
+    <div class="col-md-4 p-4">
+        <div class="card neon-class neon-line">
+            <img class="product-round-border" src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}">
             <div class="card-body">
                 <h5 class="card-title">{{ flan.name }}</h5>
                 <p class="card-text">{{ flan.description }}</p>

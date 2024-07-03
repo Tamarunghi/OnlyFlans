@@ -177,7 +177,7 @@ footer {
 
 .vertical-menu {
   overflow-y: auto;
-  max-height: 100vh;
+  max-height: 80vh;
 }
 
 .vertical-menu::-webkit-scrollbar {
@@ -197,6 +197,14 @@ footer {
   background-color: white;
   border-radius: 0 0 90% 0;
   box-shadow: 0 0 10px 5px #1efbf8;
+}
+
+.about-size {
+  max-width: 500px;
+  padding: 15px;
+}
+.img-round-border {
+  border-radius: 20px;
 }
 
 /*REGISTER*/
@@ -236,4 +244,18 @@ footer {
   text-shadow: 0 0 10px #ffa800, 0 0 35px #ffa800, 0 0 15px #ffa800,
     0 0 15px #ffa800;
   box-shadow: 0 0 5px 7px #ffa800, inset 0 0 10px 5px #ffa800;
+}
+
+/*CARDS*/
+.card {
+  background-color: transparent;
+  padding: 9px;
+}
+
+.product-round-border {
+  border-radius: 10%;
+}
+
+#card .neon-line{
+  border: 1px solid white;
 }

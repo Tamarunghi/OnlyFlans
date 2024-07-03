@@ -8,13 +8,13 @@
 {% endblock %}
 
 {% block content %}
-<main class="container">
-    <header class="d-flex flex-column justify-content-center align-items-center">
+<main class="container d-flex flex-column justify-content-center align-items-center">
+    <header>
         <h1 class="neon-class text-center">
             ACERCA DE <br>NOSOTROS</h1>
         <div class="line2 mb-5"></div>
     </header>
-    <section class="neon-class neon-line mb-5 text-center ">
+    <section class="container neon-class neon-line mb-5 text-center ">
         <p>Somos OnlyFlans, apasionados por la excelencia en la pastelería. Nos especializamos en la creación de
             flanes
             exquisitos, ofreciendo una amplia variedad de sabores y una experiencia única de sabor y frescura.
@@ -31,8 +31,8 @@
             gastronómico y descubre el delicioso mundo de los flanes con OnlyFlans.</p>
     </section>
 
-    <section class="neon-line d-flex justify-content-center">
-        <img src="{% static 'img/team.jpg' %}">
+    <section class="about-size neon-line d-flex justify-content-center">
+        <img class="img-round-border img-fluid" src="{% static 'img/team.jpg' %}">
     </section>
 </main>
 
