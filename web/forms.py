@@ -1,4 +1,6 @@
 from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from .models import ContactForm
 
 class ContactFormForm(forms.ModelForm):
@@ -6,13 +8,9 @@ class ContactFormForm(forms.ModelForm):
         model = ContactForm
         fields = ['customer_email', 'customer_name', 'message']
 
-    def clean(self):
-        cleaned_data = super().clean()
-        email = cleaned_data.get('customer_email')
-        message = cleaned_data.get('message')
-
-        # Ejemplo de validación no asociada a un campo específico
-        if email and "example.com" in email and message and "test" in message:
-            self.add_error(None, "No puedes usar 'example.com' en el correo electrónico si el mensaje contiene 'test'.")
-
-        return cleaned_data
+class RegisterForm(UserCreationForm):
+    email = forms.EmailField(required=True)
+    #clase interna de django proporciona datos o configuracion adicional#
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']

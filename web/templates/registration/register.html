@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="neon-class mt-4 mb-4 d-flex flex-column justify-content-center align-items-center">
+    <h1>Registro</h1>
+    <div class="line3"></div>
+</header>
+<main id="register" class="neon-class mt-5 d-flex justify-content-center">
+    <form method="post">
+        {% csrf_token %}
+        <!--User-->
+        <section class="mb-3">
+            <p class="m-0">Nombre de usuario</p>
+            <div>{{ form.username }}
+                {% for error in form.username.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <!--E-mail-->
+        <section class="mb-3">
+            <p class="m-0">E-mail</p>
+            <div>
+                {{ form.email }}
+                {% for error in form.email.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <!--Password-->
+        <section class="mb-5">
+            <div class="mb-3">
+                <p class="m-0">Contraseña <span class="small-font-size">(mínimo 8 caracteres, <br>una mayúscula y un símbolo)</span></p>
+                <div>
+                    {{ form.password1 }}
+                    {% for error in form.password1.errors %}
+                    <div class="invalid-feedback">
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div>
+                <p class="m-0">Confirmar contraseña</p>
+                <div>
+                    {{ form.password2 }}
+                    {% for error in form.password2.errors %}
+                    <div class="invalid-feedback">
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!--Button-->
+        <section class="text-center">
+            <button type="submit" class="btn custom-btn">Enviar</button>
+        </section>
+    </form>
+</main>
+{% endblock %}

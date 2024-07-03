@@ -1,8 +1,26 @@
 {% extends "base.html" %}
-
+{% load static %}
 
 {% block content %}
-    <div class="text-center">
-        <p>Somos OnlyFlans, apasionados por la excelencia en la pastelería. Nos especializamos en la creación de flanes exquisitos, ofreciendo una amplia variedad de sabores y una experiencia única de sabor y frescura. Nuestro compromiso con la calidad nos impulsa a utilizar ingredientes frescos y naturales en cada preparación, garantizando así la máxima satisfacción de nuestros clientes. En OnlyFlans, nos esforzamos por brindar un servicio al cliente excepcional, atendiendo cada pedido con cuidado y dedicación. Únete a nosotros en este viaje gastronómico y descubre el delicioso mundo de los flanes con OnlyFlans.</p>
-    </div>
+<main>
+    <header class="d-flex flex-column justify-content-center align-items-center">
+        <h1 class="neon-class text-center">
+            ACERCA DE <br>NOSOTROS</h1>
+        <div class="line2 mb-5"></div>
+    </header>
+    <section class="neon-class neon-line mb-5 text-center ">
+        <p>Somos OnlyFlans, apasionados por la excelencia en la pastelería. Nos especializamos en la creación de flanes
+            exquisitos, ofreciendo una amplia variedad de sabores y una experiencia única de sabor y frescura. Nuestro
+            compromiso con la calidad nos impulsa a utilizar ingredientes frescos y naturales en cada preparación,
+            garantizando así la máxima satisfacción de nuestros clientes. En OnlyFlans, nos esforzamos por brindar un
+            servicio al cliente excepcional, atendiendo cada pedido con cuidado y dedicación. Únete a nosotros en este
+            viaje
+            gastronómico y descubre el delicioso mundo de los flanes con OnlyFlans.</p>
+    </section>
+
+    <section class="neon-line d-flex justify-content-center">
+        <img src="{% static 'img/team.jpg' %}">
+    </section>
+</main>
+
 {% endblock %}
