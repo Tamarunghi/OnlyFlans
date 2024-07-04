@@ -1,0 +1,45 @@
+{% load static %}
+<aside class="vertical-menu d-none d-lg-flex flex-column justify-content-center align-items-center">
+  <div class="custom-image text-center">
+    <a href="{% url 'welcome' %}">
+      <img src="{% static 'img/iconAboutUs.png' %}">
+      <p>Zona Fans</p>
+    </a>
+  </div>
+  <div class="custom-image text-center">
+    <a href="{% url 'about' %}">
+      <img src="{% static 'img/iconAboutUs.png' %}">
+      <p>Acerca de Nosotros</p>
+    </a>
+  </div>
+  <div class="custom-image text-center">
+    <a href="{% url 'products' %}">
+      <img src="{% static 'img/iconProducts.png' %}">
+      <p>Conoce nuestros productos</p>
+    </a>
+  </div>
+  <div class="custom-image text-center">
+    <a href="{% url 'welcome' %}">
+      <img src="{% static 'img/IconSpecialProducts.png' %}">
+      <p>Productos Especiales</p>
+    </a>
+  </div>
+  <div class="custom-image text-center">
+    <a href="{% url 'login' %}">
+      <img src="{% static 'img/IconContact.png' %}">
+      <p>Iniciar<br>Sesión</p>
+    </a>
+  </div>
+  <div class="custom-image text-center">
+    <a href="{% url 'register' %}">
+      <img src="{% static 'img/IconContact.png' %}">
+      <p>Registrate</p>
+    </a>
+  </div>
+  <div class="custom-image text-center">
+    <a href="{% url 'contact' %}">
+      <img src="{% static 'img/IconContact.png' %}">
+      <p>Contacto</p>
+    </a>
+  </div>
+</aside>

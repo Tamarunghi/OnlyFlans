@@ -1,6 +1,7 @@
 body {
   background-color: black;
   color: white;
+  height: 100vh;
 }
 
 /*FONTS*/
@@ -119,17 +120,16 @@ body {
 
 /*footer*/
 footer {
-  text-align: center;
   bottom: 0;
   width: 100%;
-  padding: 10px 0;
   margin-top: auto;
+  padding: 20px 0 20px 0;
 }
 /*Fin footer*/
 
 /*INDEX*/
-.custome-title {
-  font-size: 5rem;
+.custom-title {
+  font-size: 4rem;
   color: #ffffff;
   text-shadow: 0 0 10px #ffa800, 0 0 30px #ffa800, 0 0 40px #ffa800,
     0 0 50px #ffa800, 0 0 60px #ffa800;
@@ -143,30 +143,51 @@ footer {
   box-shadow: 0 0 10px 5px #1efbf8;
 }
 
-/*carrusel*/
-#carouselExampleIndicators {
-  max-width: 800px; /* Ajustar el ancho máximo del carrusel */
-  margin: auto; /* Centrar el carrusel horizontalmente */
-}
-
-.customCarousel {
-  box-shadow: 0 0 10px 5px #1efbf8;
-}
-/*Fin carrusel*/
-
 /*Scroll Menu*/
 .scrollable-section {
   overflow-x: auto;
   white-space: nowrap;
   margin-bottom: 20px;
 }
+
 .scrollable-section img {
   width: 100px;
 }
 
+.scrollable-section a {
+  text-decoration: none;
+}
+
+@media (max-width: 788px) {
+  .scrollable-section {
+    font-size: 10px;
+  }
+}
 .custom-image {
   width: 100px;
   height: auto;
+}
+
+@media (min-width: 992px) {
+  .custom-image img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+.vertical-menu {
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.vertical-menu::-webkit-scrollbar {
+  width: 8px;
+  border: 1px solid #0ff;
+  box-shadow: 0 0 10px 5px #0ff;
+}
+
+.noContainer {
+  width: 100vw;
 }
 
 /*ABOUT US*/
@@ -176,6 +197,14 @@ footer {
   background-color: white;
   border-radius: 0 0 90% 0;
   box-shadow: 0 0 10px 5px #1efbf8;
+}
+
+.about-size {
+  max-width: 500px;
+  padding: 15px;
+}
+.img-round-border {
+  border-radius: 20px;
 }
 
 /*REGISTER*/
@@ -215,4 +244,18 @@ footer {
   text-shadow: 0 0 10px #ffa800, 0 0 35px #ffa800, 0 0 15px #ffa800,
     0 0 15px #ffa800;
   box-shadow: 0 0 5px 7px #ffa800, inset 0 0 10px 5px #ffa800;
+}
+
+/*CARDS*/
+.card {
+  background-color: transparent;
+  padding: 9px;
+}
+
+.product-round-border {
+  border-radius: 10%;
+}
+
+#card .neon-line{
+  border: 1px solid white;
 }

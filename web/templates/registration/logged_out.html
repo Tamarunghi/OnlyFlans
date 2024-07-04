@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
+{% block asideMenu %}
+<div class="col-lg-2">
+    {% include 'parts/asideMenu.html' %}
+</div>
+{% endblock %}
+
 <h1>Sesión Cerrada</h1>
 <p>Has cerrado sesión existosamente</p>
 <a href="{% url 'views/index' %}">Ir a inicio</a>
