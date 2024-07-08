@@ -1,3 +1,2 @@
 # OnlyFlans
-## Lenguaje de programación: Python
-## Librería: Django
+La pesentación del proyecto esta en el archivo hito5.pdf
