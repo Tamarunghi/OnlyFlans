@@ -1,2 +1,6 @@
 # OnlyFlans
-La pesentación del proyecto esta en el archivo hito5.pdf
+Pagian web para amantes de los flans y postres
+Trabajo en grupo
+Integrantes:
+Néstor Ahumada
+Tamara Aviles
